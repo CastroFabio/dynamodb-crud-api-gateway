@@ -5,7 +5,7 @@ provider:
   runtime: nodejs14.x
   stage: dev
   region: sa-east-1
-  enviroment:
+  environment:
     DYNAMODB_TABLE_NAME: ${self:custom.postsTableName}
 
 custom:
@@ -14,7 +14,7 @@ custom:
 plugins:
   - serverless-iam-roles-per-function
 
-funtions:
+functions:
   getPost:
     handler: api.getPost
     name: get-post
